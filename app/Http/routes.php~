@@ -11,11 +11,5 @@
 |
 */
 
-// home
+//home
 Route::get('/', 'StaticPagesController@home')->name('home');
-
-// album
-Route::resource('albums', 'AlbumsController');
-
-//photo
-Route::resource('photos', 'PhotosController');
