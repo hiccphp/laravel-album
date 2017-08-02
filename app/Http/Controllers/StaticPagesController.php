@@ -7,10 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Album;
+
 class StaticPagesController extends Controller
 {
     //home
     public function home() {
-    	return view('home');
+    	// get all albums from database
+    	$albums = Album::all();
+    
+    	//return
+    	return view('home', compact('albums'));
     }
 }

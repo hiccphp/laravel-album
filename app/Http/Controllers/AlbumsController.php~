@@ -53,13 +53,4 @@ class AlbumsController extends Controller
     	session()->flash('success', 'Edit sucessful');
     	return back();
     }
-    
-    public function destroy($id) {
-    	// delete
-    	$album = Album::findOrFail($id);
-    	$album->delete();
-    	// return 
-    	session()->flash('success', 'Delete Successful');
-    	return redirect()->route('home');
-    }
 }
